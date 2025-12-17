@@ -80,30 +80,58 @@ ul li:hover ul.dropdown{
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: -100%;
+
+  .navdiv {
     flex-direction: column;
-    background-color: #111;
-    width: 200px;
-    transition: right 0.3s ease-in-out;
-    padding: 20px;
-    border-radius: 10px;
+    align-items: flex-start;
   }
 
-  .nav-links li {
-    margin: 15px 0;
+  .logo a {
+    font-size: 32px;
+    padding: 10px 0;
   }
 
-  .nav-links.active {
-    right: 20px;
+  /* Hide desktop menu */
+  .navdiv ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: rgb(10, 10, 87);
   }
 
+  .navdiv ul li {
+    display: block;
+    width: 100%;
+  }
+
+  .navdiv ul li a {
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Dropdown mobile fix */
+  ul li ul.dropdown {
+    position: static;
+    width: 100%;
+    background: #f4f4f4;
+  }
+
+  ul li ul.dropdown li a {
+    padding-left: 30px;
+  }
+
+  /* Show hamburger */
   .hamburger {
     display: flex;
   }
+
+  /* Toggle class (add with JS) */
+  .navdiv ul.active {
+    display: flex;
+  }
 }
+
 
  #hero {
    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('Images/ofspace-llc-P5AyWcbmFjI-unsplash.jpg');
@@ -202,6 +230,39 @@ ul li:hover ul.dropdown{
       border-radius: 50% 50% 50% 50% / 40% 50% 50% 60%; /* wavy blob effect */
       box-shadow: 0 8px 25px rgb(248, 238, 219);
     }
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 6%;
+    min-height: auto;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .animate-text {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .btn-group {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    max-width: 80%;
+    margin-top: 2rem;
+  }
+}
+
+  
 /* About Page Styling */
 
  #about {
@@ -262,6 +323,32 @@ ul li:hover ul.dropdown{
         transform: translateY(0);
       }
     }
+
+  @media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 6%;
+  }
+
+  .about-text h2 {
+    font-size: 2.8rem;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+  }
+
+  .about-image {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+}
+
 
 
 #learn{
