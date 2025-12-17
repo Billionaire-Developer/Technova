@@ -5,132 +5,136 @@
 }
 body{
     background-color:#5d889a;
-    
+}
 
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgb(10, 10, 87);
+  padding: 15px;
+  z-index: 1000;
 }
-.navbar{
-    position: sticky;
-    top: 0;
-    background: rgb(10, 10, 87);
-    padding-right: 15px;
-    padding-left: 15px;
+
+.navdiv {
+  display: flex;
+  align-items: center;
 }
-.navdiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+/* LOGO */
+.logo a {
+  font-size: 45px;
+  font-weight: 600;
+  color: aliceblue;
+  text-decoration: none;
 }
-.logo a{
-    font-size: 45px;
-    font-weight: 600;
-    color: aliceblue;
-    text-decoration: none;
+
+/* NAV MENU */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin-left: auto; /* pushes menu & hamburger right */
 }
-.navdiv ul{
-    list-style: none;
+
+.nav-menu li {
+  position: relative;
 }
-.navdiv ul li{
-    display: inline-block;
-    position: relative;
+
+.nav-menu li a {
+  display: block;
+  padding: 20px 25px;
+  color: orange;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
 }
-.navdiv ul li a{
-    display: block;
-    padding: 20px 25px;
-    color: orange;
-    text-decoration: none;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 600;
+
+.nav-menu li a:hover {
+  color: blue;
 }
-ul li ul.dropdown li{
-    display: block;
+
+/* DROPDOWN */
+.nav-menu li ul.dropdown {
+  display: none;
+  position: absolute;
+  background: #fff;
+  width: 200px;
+  z-index: 999;
 }
-ul li ul.dropdown{
-    width: 100%;
-    position: absolute;
-    z-index: 999;
-    display: none;
-    background: #fff;
+
+.nav-menu li:hover ul.dropdown {
+  display: block;
 }
-ul li ul.dropdown li a{
-    padding: 8px 15px;
-    font-size: 16px;
-    font-weight: 600;
+
+.nav-menu li ul.dropdown li a {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #000;
 }
-ul li a:hover{
-    color:blue;
-}
-ul li:hover ul.dropdown{
-    display: block;
-}
-/* HAMBURGER MENU FOR MOBILE */
+
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
-  cursor: pointer;
   gap: 5px;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #00e5ff;
+  background: #00e5ff;
   border-radius: 3px;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .navdiv {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .logo a {
     font-size: 32px;
-    padding: 10px 0;
   }
 
-  /* Hide desktop menu */
-  .navdiv ul {
+  /* SHOW HAMBURGER RIGHT */
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* HIDE MENU */
+  .nav-menu {
     display: none;
     width: 100%;
     flex-direction: column;
     background: rgb(10, 10, 87);
+    margin-top: 15px;
   }
 
-  .navdiv ul li {
-    display: block;
-    width: 100%;
+  .nav-menu.active {
+    display: flex;
   }
 
-  .navdiv ul li a {
+  .nav-menu li a {
     padding: 15px;
     text-align: left;
-    width: 100%;
   }
 
-  /* Dropdown mobile fix */
-  ul li ul.dropdown {
+  /* MOBILE DROPDOWN */
+  .nav-menu li ul.dropdown {
     position: static;
     width: 100%;
     background: #f4f4f4;
   }
 
-  ul li ul.dropdown li a {
+  .nav-menu li ul.dropdown li a {
     padding-left: 30px;
   }
-
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Toggle class (add with JS) */
-  .navdiv ul.active {
-    display: flex;
-  }
 }
+
 
 
  #hero {
@@ -643,6 +647,7 @@ ul li:hover ul.dropdown{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #0f0f0f;
 }
 .masterclass-card{
   width: 550px;
