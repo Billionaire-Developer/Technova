@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+    <!-- Navigation bar section -->
+        <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="">TechHub</a></div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li>
+                    <a href="#masterclass">Masterclass v</a>
+                    <ul class="dropdown">
+                        <li><a href="#masterclass">Frontend Development</a></li>
+                        <li><a href="#masterclass">Backend Development</a></li>
+                        <li><a href="#masterclass">Data Analysis</a></li>
+                        <li><a href="#masterclass">Devops Engineering</a></li>
+                        <li><a href="#masterclass">Product Design</a></li>
+                        <li><a href="#masterclass">Product Management</a></li>
+                        <li><a href="#masterclass">Cybersecurity</a></li>
+                        <li><a href="#masterclass">Web3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Scholarships</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="how-it-works">
+  <h2>How It Works</h2>
+
+  <div class="carousel-container">
+    <button class="nav prev">&#10094;</button>
+
+    <div class="carousel">
+      <div class="card">
+        <span class="step">01</span>
+        <h3>Apply</h3>
+        <p>Submit your application and choose your learning path.</p>
+      </div>
+
+      <div class="card">
+        <span class="step">02</span>
+        <h3>Learn</h3>
+        <p>Attend expert-led classes and structured training.</p>
+      </div>
+
+      <div class="card">
+        <span class="step">03</span>
+        <h3>Build</h3>
+        <p>Work on real-world projects to gain experience.</p>
+      </div>
+
+      <div class="card">
+        <span class="step">04</span>
+        <h3>Get Certified</h3>
+        <p>Earn recognized certifications after completion.</p>
+      </div>
+
+      <div class="card">
+        <span class="step">05</span>
+        <h3>Get Hired</h3>
+        <p>Receive career support and job placement guidance.</p>
+      </div>
+    </div>
+
+    <button class="nav next">&#10095;</button>
+  </div>
+</section>
+
+
+    <!-- Form Section -->
+    <section class="scholarship-form-section">
+        <h2>Apply for Our Tech Scholarship</h2>
+        <p>Complete the form below to apply for our scholarship</p>
+
+        <form action="https://formspree.io/f/mjknqwqj" method="POST" class="scholarship-form" enctype="multipart/form-data">
+            <!-- Full Name-->
+             <label for="name">Full Name</label>
+             <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+             <!-- Email -->
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="myemail@gmail.com" required>
+
+              <!-- Phone number -->
+               <label for="phone">Phone number</label>
+               <input type="tel" id="phone" name="phone" placeholder="+234 704-113-7256" required>
+
+               <!-- Date of Birth -->
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <!-- Academic Background-->
+                 <label for="education">Academic Background</label>
+                 <select id="education" name="education" required>
+                    <option value="">--Select your highest qualification--</option>
+                    <option value="high school">High School</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="masters">Master's Degree</option>
+                    <option value="others">Others</option>
+                 </select>
+
+                 <!-- Tech Skills / Experience-->
+                  <label for="skills">Technical Skills / Experience</label>
+                  <textarea id="skills" name="skills" rows="4" placeholder="Describe your relevant skills or experience..."></textarea>
+
+                  <!-- Motivation / statement of purpose -->
+                   <label for="motivation">Why do you deserve this scholarship?</label>
+                   <textarea id="motivation" name="motivation" rows="5" placeholder="Explain your goals, motivation, and impact you hope to make..." required></textarea>
+
+                    <!-- Preferred Course / Program -->
+                     <label for="course">Preferred Program / Course</label>
+                     <select id="course" name="course" required>
+                        <option value="">--Select a program--</option>
+                        <option value="frontend-development">Frontend Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="cyber-security">Cyber Security</option>
+                        <option value="cloud-computing">Cloud Computing</option>
+                        <option value="ui-ux-design">UI/UX Design</option>
+                        <option value="backend-development">Backend Development</option>
+                        <option value="project-management">Project Management</option>
+                     </select>
+
+                     <!-- Submit Button-->
+                      <button type="submit" class="btn-submit">Apply Now</button>
+        </form>
+    </section>
+</body>
+</html>

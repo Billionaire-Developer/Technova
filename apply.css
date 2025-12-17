@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #5d889a;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    background: rgb(10, 10, 87);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    font-size: 45px;
+    font-weight: 600;
+    color: aliceblue;
+    text-decoration: none;
+}
+.navdiv ul{
+    list-style: none;
+}
+.navdiv ul li{
+    display: inline-block;
+    position: relative;
+}
+.navdiv ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: orange;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background: #fff;
+}
+ul li ul.dropdown li a{
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+ul li a:hover{
+    color:blue;
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+/* This section is for the carousel */
+
+.how-it-works {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  min-width: 300px;
+  background: #111;
+  color: #fff;
+  padding: 30px;
+  margin: 0 10px;
+  border-radius: 16px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.step {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00e5ff;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #00e5ff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 80%;
+  }
+}
+
+
+
+.scholarship-form-section {
+    background-color: #fff;
+    border: outset;
+    border-radius: 20px;
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: fadeUp 0.8s ease-in-out;
+}
+@keyframes fadeUp {
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 3;
+    transform: translateY(0px);
+  }
+}
+.scholarship-form-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+.scholarship-form-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+.scholarship-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+}
+.scholarship-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.scholarship-form input,
+.scholarship-form select,
+.scholarship-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.scholarship-form input: focus,
+.scholarship-form select: focus,
+.scholarship-form textarea: focus {
+    border-color: #0a58ca;
+}
+.btn-submit {
+    padding: 14px 28px;
+    background-color: #0a58ca;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.btn-submit:hover {
+    background-color: #0056a3;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .scholarship-form-section {
+        padding: 15px;
+    }
+    .scholarship-form-section h2 {
+        font-size: 1.8rem;
+    }
+}
