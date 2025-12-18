@@ -23,7 +23,7 @@
 .logo a {
   font-size: 45px;
   font-weight: 600;
-  color: aliceblue;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -111,7 +111,7 @@
     display: none;
     width: 100%;
     flex-direction: column;
-    background: rgb(10, 10, 87);
+    background: #0f0f0f;
     margin-top: 15px;
   }
 
