@@ -85,7 +85,7 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #00e5ff;
+  background: #0f0f0f;
   border-radius: 3px;
 }
 
@@ -256,13 +256,13 @@
     font-size: 1rem;
   }
 
-  .btn-group {
+  .btn {
     justify-content: center;
     flex-wrap: wrap;
   }
 
   .hero-image {
-    max-width: 80%;
+    max-width: 100%;
    
   }
 }
